@@ -1,13 +1,26 @@
+import Head from 'next/head';
 import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <main className="flex flex-col items-center justify-center py-20">
-        <h2 className="text-4xl font-bold text-primary">Bienvenue sur KIMO</h2>
-        <p className="text-gray-600 mt-2">Votre marketplace inspirée de Temu et AliExpress</p>
-      </main>
-    </div>
+    <>
+      <Head>
+        <title>KIMO - Votre marketplace moderne</title>
+      </Head>
+      <div className="min-h-screen bg-white">
+        <Header />
+        <main className="p-4 text-center">
+          <h1 className="text-4xl font-bold text-orange-500">
+            Bienvenue sur KIMO
+          </h1>
+          <p className="mt-4 text-gray-600">
+            Votre plateforme pour acheter et vendre facilement
+          </p>
+          <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded">
+            Se connecter avec Google
+          </button>
+        </main>
+      </div>
+    </>
   );
 }
